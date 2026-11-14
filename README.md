@@ -46,6 +46,22 @@ Aturan:
 
 Rantai aturan: R1 → R2 → R9, R3/R4 → R5, dan R6 → R7/R8.
 
+### Daftar fakta
+
+Fakta awal ditanyakan ke pengguna sesuai urutan di bawah. Pada mode `--fakta`, penulisannya harus sama persis dengan tabel ini, dipisah koma.
+
+| No | Fakta | Dipakai di |
+| -- | ----- | ---------- |
+| 1 | daun menguning | R1 |
+| 2 | tanaman mengering cepat seperti terbakar | R1 |
+| 3 | tanaman berada pada fase vegetatif | R3, R7 |
+| 4 | anakan mati | R3 |
+| 5 | tanaman berada pada fase generatif | R4, R8 |
+| 6 | malai putih dan hampa | R4 |
+| 7 | ditemukan ngengat penggerek batang | R6 |
+
+Fakta turunan (hasil aturan, tidak ditanyakan): gejala hopperburn; serangan wereng coklat; sundep; beluk; serangan penggerek batang; waktunya aplikasi insektisida penggerek batang; gunakan insektisida butiran berbahan aktif karbofuran; gunakan insektisida semprot cair; saran pengendalian wereng coklat.
+
 ## 3. Metode: Forward Chaining
 
 Forward chaining dipilih karena data yang dimiliki pengguna berupa gejala yang terlihat di sawah, lalu program menurunkan kesimpulan dari gejala itu. Langkahnya:
