@@ -1,0 +1,128 @@
+{
+  "judul": "Sistem Pakar Hama Padi: Wereng Coklat dan Penggerek Batang",
+  "batas": "Aturan berasal dari dua publikasi Kementerian Pertanian (buku Pertanian Press 2024 dan Buletin Teknologi & Inovasi Pertanian 2026) tentang hama padi di Indonesia dan hanya mencakup wereng coklat serta penggerek batang. Penyakit padi dan hama lain tidak dicakup. Hasilnya saran awal, bukan keputusan akhir; konfirmasikan ke petugas penyuluh atau pengamat hama setempat.",
+  "sumber": {
+    "S1": "Pengendalian Hama dan Penyakit Utama Tanaman Padi, Suprihanto dkk., Pertanian Press (Balai Besar Pengujian Standar Instrumen Padi), Bogor, 2024, ISBN 978-979-582-277-6, https://epublikasi.pertanian.go.id/pertanianpress/catalog/view/90/91/1784, diakses 14 Nov 2026",
+    "S2": "6 Ancaman Utama pada Tanaman Padi beserta Cara Pengendaliannya, Rifki Oktiar Rachman, Buletin Teknologi & Inovasi Pertanian 5(1), 2026, Balai Besar Perpustakaan dan Literasi Pertanian, Kementerian Pertanian, https://epublikasi.pertanian.go.id/berkala/btip/article/download/4503/4382/11141, diakses 14 Nov 2026"
+  },
+  "keterangan": {
+    "saran pengendalian wereng coklat": "Tanam serentak, gunakan varietas tahan wereng coklat sesuai biotipe di lapangan, dan gunakan insektisida yang direkomendasikan bila populasi melewati ambang.",
+    "serangan penggerek batang": "Sundep pada fase vegetatif, beluk pada fase generatif.",
+    "waktunya aplikasi insektisida penggerek batang": "Insektisida dapat dipakai bila sudah ditemukan 1 ekor ngengat pada perangkap lampu atau pertanaman, aplikasi sekitar 4 hari setelah ditemukan.",
+    "gunakan insektisida butiran berbahan aktif karbofuran": "Pada fase vegetatif insektisida butiran diberikan dengan dosis 20 kg per ha.",
+    "gunakan insektisida semprot cair": "Pada fase generatif gunakan insektisida semprot berbahan aktif spinetoram, klorantraniliprol, atau dimehipo."
+  },
+  "aturan": [
+    {
+      "id": "R1",
+      "jika": [
+        "daun menguning",
+        "tanaman mengering cepat seperti terbakar"
+      ],
+      "mode": "dan",
+      "maka": "gejala hopperburn",
+      "sumber": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "R2",
+      "jika": [
+        "gejala hopperburn"
+      ],
+      "mode": "dan",
+      "maka": "serangan wereng coklat",
+      "sumber": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "R3",
+      "jika": [
+        "tanaman berada pada fase vegetatif",
+        "anakan mati"
+      ],
+      "mode": "dan",
+      "maka": "sundep",
+      "sumber": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "R4",
+      "jika": [
+        "tanaman berada pada fase generatif",
+        "malai putih dan hampa"
+      ],
+      "mode": "dan",
+      "maka": "beluk",
+      "sumber": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "R5",
+      "jika": [
+        "sundep",
+        "beluk"
+      ],
+      "mode": "atau",
+      "maka": "serangan penggerek batang",
+      "sumber": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "R6",
+      "jika": [
+        "ditemukan ngengat penggerek batang"
+      ],
+      "mode": "dan",
+      "maka": "waktunya aplikasi insektisida penggerek batang",
+      "sumber": [
+        "S1"
+      ]
+    },
+    {
+      "id": "R7",
+      "jika": [
+        "waktunya aplikasi insektisida penggerek batang",
+        "tanaman berada pada fase vegetatif"
+      ],
+      "mode": "dan",
+      "maka": "gunakan insektisida butiran berbahan aktif karbofuran",
+      "sumber": [
+        "S1"
+      ]
+    },
+    {
+      "id": "R8",
+      "jika": [
+        "waktunya aplikasi insektisida penggerek batang",
+        "tanaman berada pada fase generatif"
+      ],
+      "mode": "dan",
+      "maka": "gunakan insektisida semprot cair",
+      "sumber": [
+        "S1"
+      ]
+    },
+    {
+      "id": "R9",
+      "jika": [
+        "serangan wereng coklat"
+      ],
+      "mode": "dan",
+      "maka": "saran pengendalian wereng coklat",
+      "sumber": [
+        "S1",
+        "S2"
+      ]
+    }
+  ]
+}
